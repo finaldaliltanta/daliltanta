@@ -1,0 +1,27 @@
+
+#wrapper{
+    width:935px;
+    height:420px;
+	text-align:left;
+    margin: auto ;
+	
+    padding:47px 0px 0px 0px;
+	border:none;
+	display:block;
+	border-raduis:10px;
+	
+}
+
+
+#bigPic{
+	width:935px;
+	height:420px;
+	padding:0px;
+	display:block;
+	border: 10px solid #fff;
+}
+#bigPic img{
+	position:relative;
+	display:none;
+	
+}
