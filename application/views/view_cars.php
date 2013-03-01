@@ -11,7 +11,7 @@
 
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
      <script type="text/javascript" src="<?php echo base_url();?>js/custom.js" ></script>
-     <script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/jquery.easing.js"></script>
+    <script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/jquery.easing.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/script.js"></script>
 <script type="text/javascript">
  $(document).ready( function(){	
@@ -31,21 +31,7 @@
 											buttons			: buttons } );	
 	});
 </script>
-    
 
-	<style type="text/css">
-
-
-#doc{float:right;padding:10px;width:680px; text-align:right;background:url(<?php echo base_url();?>images/doc.png) top left no-repeat;-webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-border:1px solid #e0e0e0;
-margin-bottom:20px;
-height:130px;
-
-}
-.doc{position:absolute; width:200px; height:100px;margin-left:-180px; margin-top:20px}
-</style>
 </head>
 <body id="home" class="home blog cufon-enabled ie et_includes_sidebar">
 		<?php include('header.php')?>	
@@ -63,7 +49,7 @@ height:130px;
     
     <!---------------------------------------- left column the most view ------------------------------------------------------>
 		<div id="left-column">
-			<?php include('doctor_content.php');?>	
+			<?php include('cars_content.php')?>	
 	  
 	
 	<div class="clear"></div>			<div class='wp-pagenavi'>
@@ -95,7 +81,46 @@ height:130px;
 
 		
 	 
-
+<script type="text/javascript">
+	var currentImage;
+    var currentIndex = -1;
+    var interval;
+    function showImage(index){
+        if(index < $('#bigPic img').length){
+        	var indexImage = $('#bigPic img')[index]
+            if(currentImage){   
+            	if(currentImage != indexImage ){
+                    $(currentImage).css('z-index',2);
+                    clearTimeout(myTimer);
+                    $(currentImage).fadeOut(0, function() {
+					    myTimer = setTimeout("showNext()", 4000);
+					    $(this).css({'display':'none','z-index':1})
+					});
+                }
+            }
+            $(indexImage).css({'display':'block', 'opacity':1});
+            currentImage = indexImage;
+            currentIndex = index;
+           
+        }
+    }
+    
+    function showNext(){
+        var len = $('#bigPic img').length;
+        var next = currentIndex < (len-1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+    
+    var myTimer;
+    
+    $(document).ready(function() {
+	    myTimer = setTimeout("showNext()",0);
+		showNext(); //loads first image
+       
+	});
+    
+	
+	</script>	
     <script type="text/javascript" src="<?php echo base_url();?>js/superfish.js" ></script>
 <script type="text/javascript">
 	var currentImage;
@@ -134,8 +159,8 @@ height:130px;
 		showNext(); //loads first image
        
 	});
-    </script>
-	<script type="text/javascript">
+    
+	
 		jQuery('ul#secondary-menu').superfish({ 
 			delay:       300,                            // one second delay on mouseout 
 			animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 

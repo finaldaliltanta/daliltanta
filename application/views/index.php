@@ -11,7 +11,28 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
      <script type="text/javascript" src="<?php echo base_url();?>js/custom.js" ></script>
-     
+    
+  
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		// buttons for next and previous item						 
+		var buttons = { previous:$('#jslidernews1 .button-previous') ,
+						next:$('#jslidernews1 .button-next') };			
+		 $('#jslidernews1').lofJSidernews( { interval : 4000,
+											direction		: 'opacitys',	
+											easing			: 'easeInOutExpo',
+											duration		: 1200,
+											auto		 	: true,
+											maxItemDisplay  : 4,
+											navPosition     : 'horizontal', // horizontal
+											navigatorHeight : 32,
+											navigatorWidth  : 80,
+											mainWidth		: 980,
+											buttons			: buttons } );	
+	});
+</script>   
      
     
     
@@ -152,60 +173,17 @@ margin-top:70px;
     
     
 </div> <!-- end #sidebar -->			
-				</div> <!-- #main-content -->
-			</div> <!-- #main-area -->
+	  </div> <!-- #main-content -->
+</div> <!-- #main-area -->
 			<div id="main-area-bottom"></div>
             
 	<!---------------------------------------- footer ------------------------------------------------------>
-			<div id="footer">
+<div id="footer">
 				<?php include('footer.php');?>
-			</div> <!-- #footer-->
-			
-		</div> <!-- .container -->
-	</div> <!-- #content -->
+			</div> <!-- #footer--><!-- #content -->
 	
-<script type="text/javascript">
-	var currentImage;
-    var currentIndex = -1;
-    var interval;
-    function showImage(index){
-        if(index < $('#bigPic img').length){
-        	var indexImage = $('#bigPic img')[index]
-            if(currentImage){   
-            	if(currentImage != indexImage ){
-                    $(currentImage).css('z-index',2);
-                    clearTimeout(myTimer);
-                    $(currentImage).fadeOut(0, function() {
-					    myTimer = setTimeout("showNext()", 4000);
-					    $(this).css({'display':'none','z-index':1})
-					});
-                }
-            }
-            $(indexImage).css({'display':'block', 'opacity':1});
-            currentImage = indexImage;
-            currentIndex = index;
-           
-        }
-    }
     
-    function showNext(){
-        var len = $('#bigPic img').length;
-        var next = currentIndex < (len-1) ? currentIndex + 1 : 0;
-        showImage(next);
-    }
-    
-    var myTimer;
-    
-    $(document).ready(function() {
-	    myTimer = setTimeout("showNext()",0);
-		showNext(); //loads first image
-       
-	});
-    
-	
-	</script>	
-    
-	    <script type="text/javascript" src="<?php echo base_url();?>js/superfish.js" ></script>	
+<script type="text/javascript" src="<?php echo base_url();?>js/superfish.js" ></script>	
     <script type="text/javascript">
 	jQuery('ul#secondary-menu').superfish({ 
 			delay:       300,                            // one second delay on mouseout 

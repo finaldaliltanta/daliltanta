@@ -8,11 +8,70 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/slider_style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo base_url();?>css/menu_style.css" type="text/css" media="screen" />
 <!-- jquery ui custom build (for animation easing) -->
-
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		// buttons for next and previous item						 
+		var buttons = { previous:$('#jslidernews1 .button-previous') ,
+						next:$('#jslidernews1 .button-next') };			
+		 $('#jslidernews1').lofJSidernews( { interval : 4000,
+											direction		: 'opacitys',	
+											easing			: 'easeInOutExpo',
+											duration		: 1200,
+											auto		 	: true,
+											maxItemDisplay  : 4,
+											navPosition     : 'horizontal', // horizontal
+											navigatorHeight : 32,
+											navigatorWidth  : 80,
+											mainWidth		: 980,
+											buttons			: buttons } );	
+	});
+</script>
+    
      <script type="text/javascript" src="<?php echo base_url();?>js/custom.js" ></script>
     
 <style type="text/css">
+.block_logo{position:absolute;margin-left:10px;margin-top:10px;}
+
+
+
+#gold_block table{margin-top:35px;}
+#gold_block{float:right;padding:0px;width:700px; text-align:right;background:url(<?php echo base_url();?>images/gold_block.png) no-repeat;
+
+border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+margin-bottom:20px;
+height:230px;
+
+}
+#gold_block table tr td{padding-right:10px;font-size:15px;text-align:right;color:#2e2e2e;text-transform:uppercase;font-weight:bold; }
+
+#gold_block table tr{height:20px;}
+
+
+
+#silver_block table{margin-top:15px;}
+#silver_block{float:right;width:700px; text-align:right;background:url(<?php echo base_url();?>images/silver_block.png) no-repeat;
+
+border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+-webkit-box-shadow: 0px 0px 14px rgba(32, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 14px rgba(32, 50, 50, 0.75);
+box-shadow:         0px 0px 14px rgba(32, 50, 50, 0.75);
+margin-bottom:20px;
+height:130px;
+z-index:13px;
+
+
+}
+#silver_block table tr td{padding-right:10px;font-size:15px;text-align:right;color:#2e2e2e;text-transform:uppercase;font-weight:bold; }
+
+#silver_block table tr{height:20px;}
+.silver_block{position:absolute; width:200px;height:100px; margin-left:-180px; margin-top:20px}
 
 
 #doc{float:right;padding:10px;width:680px; text-align:right;background:url(<?php echo base_url();?>images/advs_bg.png) no-repeat;-webkit-border-radius: 10px;
@@ -24,7 +83,6 @@ height:95px;
 
 }
 #doc table tr td{padding:3px;font-size:15px;}
-.doc{position:absolute; width:200px; height:100px;margin-left:-180px; margin-top:20px}
 </style>
 </head>
 <body id="home" class="home blog cufon-enabled ie et_includes_sidebar">

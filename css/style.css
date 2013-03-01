@@ -370,9 +370,14 @@ ul#secondary-menu {font-family:'myfont'; padding: 25px 0px 0px 0px; }
 					.slide .description h2.title a:hover { text-decoration: none; }
 				a.more { float: right; display: block; background: url("../images/more.png")/*tpa=http://elegantthemes.com/preview/eStore/wp-content/themes/eStore/images/more.png*/ no-repeat bottom right; padding-right: 10px; font-family: Arial, Verdana, sans-serif; color: #4e4e4d; font-size: 11px; text-shadow: 1px 1px 1px #ffffff; }
 				a.more2 { float: right; display: block; background: url("../images/more.png")/*tpa=http://elegantthemes.com/preview/eStore/wp-content/themes/eStore/images/more.png*/ no-repeat bottom right; padding-right: 10px; font-family: Arial, Verdana, sans-serif; color: #4e4e4d; font-size: 11px; text-shadow: 1px 1px 1px #ffffff; }
+				
 				a.more:hover { color: #313130; text-decoration: none; }
 				a.more2:hover { color: #313130; text-decoration: none; }
 					a.more span { display: block; background: url("../images/more.png")/*tpa=http://elegantthemes.com/preview/eStore/wp-content/themes/eStore/images/more.png*/ no-repeat top left; padding-left: 9px; height: 28px; line-height: 25px; }
+					a.more3 span {margin-top:60px;margin-left:130px;background:#CCC ;padding:7px 20px 7px 20px; 
+					 border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px; }
 			
 			a.more2 span { display: block; background: url("../images/more.png")/*tpa=http://elegantthemes.com/preview/eStore/wp-content/themes/eStore/images/more.png*/ no-repeat; padding-left: 9px; height:28px;  }
 			.main_menu{font-family: 'myfont2';}
@@ -869,15 +874,7 @@ ul.ads li.bronz a.moree {
 
 .level-2 ul li{display:inline;padding-left:33px;font-family: 'myfont2';;}
 
-#doc{float:right;padding:10px;width:680px; text-align:right;background:url('../images/advs_bg.png') no-repeat;-webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-border:1px solid #ccc;
-margin-bottom:20px;
-height:95px;
 
-
-}
 #doc table tr td{padding:3px; }
 .doc{position:absolute; width:200px; height:100px;margin-left:-180px; margin-top:20px}
 

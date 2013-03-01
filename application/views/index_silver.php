@@ -21,7 +21,26 @@ var adv_id="<?php foreach ($res as $s) {  echo $s->id;} ?>";
     
     <script src="<?php echo base_url();?>js/chat.js" type="text/javascript" ></script>
     
-
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo base_url();?>js/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		// buttons for next and previous item						 
+		var buttons = { previous:$('#jslidernews1 .button-previous') ,
+						next:$('#jslidernews1 .button-next') };			
+		 $('#jslidernews1').lofJSidernews( { interval : 4000,
+											direction		: 'opacitys',	
+											easing			: 'easeInOutExpo',
+											duration		: 1200,
+											auto		 	: true,
+											maxItemDisplay  : 4,
+											navPosition     : 'horizontal', // horizontal
+											navigatorHeight : 32,
+											navigatorWidth  : 80,
+											mainWidth		: 980,
+											buttons			: buttons } );	
+	});
+</script>
 </head>
 <body id="home" class="home blog cufon-enabled ie et_includes_sidebar">
 	<?php include('header.php')?>

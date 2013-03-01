@@ -9,73 +9,66 @@
             
    
             <!------------------------doctor try -------------------------------------------->
-             <div id="doc">
+             <div id="gold_block">
             <ul class="ads" >
            
-             <a style="float:right;position:absolute;margin-left:39px;margin-top:64px;" href="<?php echo base_url(); ?>site/showGoldenAdvDetail/<?php echo $value->id; ?>"  class="more"><span>التفاصيل</span></a>
+             <a style="float:right;position:absolute;margin-left:100px;margin-top:165px;display:block;
+             
+             "  href="<?php echo base_url(); ?>site/showGoldenAdvDetail/<?php echo $value->id; ?>"  ><img src="<?php echo base_url(); ?>images/gold_more1.png" /></a>
          
                 <li class="doctors" style="float:right;margin-top:3px;margin-left:5px;" >
-                 <img src="<?php echo base_url(); ?>images/vcard.png" class="icon"style="float:right;margin-top:3px;margin-left:5px;" >
+                
                    
-                    <h3 style="float:right;color:#666"> <?php echo $value->name; ?>        </h3>
+                  
 
                     <div class="clear"></div>
 
-                    <table width="600px" style="text-align:right; font-size:14px;">
+                    <table width="450px" style="text-align:right; font-size:14px;" >
                         <tbody>
                             <tr>
-                             <td width="50%">
+                             <td width="45%">
 
-                                    التيليفون:                                                              
-                                    <font color="#057de7">
-                                    <?php echo $value->phone; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png" width="16" height="16" class="icon">
+                                                                                              
+                                   
+                                    <?php echo $value->phone; ?>                                                         
+                                   
                                 </td>
                                                                
                                  <td width="50%">
 
-                                    النشاط:                                                              
-                                    <font color="#057de7">
-                                    <?php echo $value->nashat; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16" height="16" 
-                                         class="icon">
+                                     <?php echo $value->name; ?>                  
+                                    
+                                  
+                                    
                                 </td>
                                
                             </tr>
                         </tbody>
                     </table>
 
-                    <table width="600px"style=" font-size:14px;text-align:right;">
+                    <table width="450px"style=" font-size:14px;text-align:right;">
                         <tbody>
                             <tr>
                             </tr>
                             <tr>
                                
  
-                                <td width="50%">
+                                <td width="45%" height="20" >
 
-                                    العنوان :                                                               
-                                    <font color="#057de7">
-                                    <?php echo $value->address; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16"
-                                         height="16"
-                                         class="icon">
+                                   
+                                   
+                                    <?php echo $value->address; ?>                                                         
                                          
 
                                 </td>
                                  
-                                <td width="50%">
+                                <td width="50%" height="20">
 
-<table>
-<tr>الاسم :<td></td><font color="#057de7">
-                                    <?php echo $value->name; ?>                                                           </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16"
-                                         height="16" 
-                                         class="icon">  </tr>
-</table>
+
+                                                                                     
+                                   
+                                        
+                          <?php echo $value->nashat; ?>  
 
                                                                                          
                                       
@@ -84,12 +77,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    
   </li>
-  <?php if(isset($hamada)){?>
-  <img style="float:left;position:absolute;margin-left:-80px;margin-top:-10px;" src="<?php echo base_url(); ?>images/gold.png"  width="180" height="100" />
-  <?php }?>
+  
             </ul>
-
+<img src="<?php echo base_url();?>images/block_logo.png" class="block_logo" width="190" height="150" />
         </div>
 
         <!-- ---------------------------another doctor---------------------->
@@ -105,35 +97,33 @@
           
             
             
-            <div id="doc">
+            <div id="silver_block">
             <ul class="ads" >
-             <a style="float:right;position:absolute;margin-left:39px;margin-top:64px;" href="<?php echo base_url(); ?>site/showSliverAdvDetail/<?php echo $value->id; ?>"  class="more"><span>التفاصيل</span></a>
+           <a style="float:right;position:absolute;margin-left:20px;margin-top:40px;display:block"  href="<?php echo base_url(); ?>site/showGoldenAdvDetail/<?php echo $value->id; ?>" ><img src="<?php echo base_url(); ?>images/silver_more.png" /></a>
          
                 <li class="doctors" style="float:right;margin-top:3px;margin-left:5px;" >
-                    <img src="<?php echo base_url(); ?>images/vcard.png" class="icon"style="float:right;margin-top:3px;margin-left:5px;" >
-                    <h3 style="float:right;color:#666"> <?php echo $value->name; ?>        </h3>
+                   
+                   
 
                     <div class="clear"></div>
 
-                    <table  width="600px" style="text-align:right; font-size:14px;">
+                    <table width="600px" style="text-align:right; font-size:14px;">
                         <tbody>
                             <tr>
-                             <td width="50%">
+                             <td width="57%">
 
-                                    التيليفون:                                                              
-                                    <font color="#057de7">
-                                    <?php echo $value->phone; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png" width="16" height="16" class="icon">
+                                                                                              
+                                   
+                                    <?php echo $value->phone; ?>                                                         
+                                   
                                 </td>
                                                                
                                  <td width="50%">
 
-                                    النشاط:                                                              
-                                    <font color="#057de7">
-                                    <?php echo $value->nashat; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16" height="16" 
-                                         class="icon">
+                                     <?php echo $value->name; ?>                  
+                                    
+                                  
+                                    
                                 </td>
                                
                             </tr>
@@ -147,37 +137,30 @@
                             <tr>
                                
  
-                                <td width="50%">
+                                <td width="57%" height="20" >
 
-                                    العنوان :                                                               
-                                    <font color="#057de7">
-                                    <?php echo $value->address; ?>                                                         </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16"
-                                         height="16"
-                                         class="icon">
+                                   
+                                   
+                                    <?php echo $value->address; ?>                                                         
                                          
 
                                 </td>
                                  
-                                <td width="50%">
+                                <td width="50%" height="20">
 
-<table>
-<tr>الاسم :<td></td><font color="#057de7">
-                                    <?php echo $value->name; ?>                                                           </font>
-                                    <img src="<?php echo base_url(); ?>images/bullet_red.png"
-                                         width="16"
-                                         height="16" 
-                                         class="icon">  </tr>
-</table>
 
-                                    
+                                                                                     
+                                   
+                                        
+                          <?php echo $value->nashat; ?>  
+
+                                                                                         
+                                      
 
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-  </li>
             </ul>
 
         </div>              

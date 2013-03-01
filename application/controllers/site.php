@@ -296,7 +296,117 @@ class site extends CI_Controller {
         }
     }
 
-////////////////////////////////////////
+    //////////////////////////////
+
+
+
+    function load_cars() {
+
+        $data1 = $this->home_page();
+        $this->load->view('view_cars', $data1);
+    }
+
+    function addCarAdv() {
+
+        $this->load->model('cars_jops');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('name', ' The name ', 'required|trim|max_length[100]|xss_clean');
+        $this->form_validation->set_rules('phone', 'The phone ', 'required|trim|max_length[100]xss_clean');
+        $this->form_validation->set_rules('email', 'The email ', 'required|max_length[39]trim|xss_clean|valid_email');
+        $this->form_validation->set_rules('face_page', 'Facebook Link', 'max_length[390]trim|xss_clean');
+        $this->form_validation->set_rules('detail', 'Details ', 'required|max_length[10299]trim|xss_clean');
+        $this->form_validation->set_rules('notes', 'Notes', 'trim|xss_clean|max_length[8000]');
+		$this->form_validation->set_message('valid_email', "بريدك الالكتروني غير صحيح من فضلك ادخله بطريقه صحيحه");
+
+        if ($this->form_validation->run() == false) {
+
+            $this->load->view("view_cars");
+        } else {
+            $name = $this->input->post('name');
+            $phone = $this->input->post('phone');
+            $email = $this->input->post('email');
+            $face_page = $this->input->post('face_page');
+            $detail = $this->input->post('detail');
+            $notes = $this->input->post('notes');
+
+            $inset_value = array(
+                'name' => $name,
+                'phone' => $phone,
+                'email' => $email,
+                'face_page' => $face_page,
+                'detail' => $detail,
+                'notes' => $notes
+            );
+
+            $this->load->model("cars_jops");
+            $this->cars_jops->insertCar($inset_value);
+            $data = $this->home_page();
+            $data['name'] = $name;
+            $this->load->view('view_cars', $data);
+        }
+    }
+
+    function load_jops() {
+        $data1 = $this->home_page();
+        $this->load->view('view_jops', $data1);
+    }
+
+    function addJopAdv() {
+        $this->load->model('cars_jops');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('name', ' الاسم ', 'required|trim|max_length[100]|xss_clean');
+        $this->form_validation->set_rules('phone', 'التليفون ', 'required|trim|max_length[100]xss_clean');
+        $this->form_validation->set_rules('email', 'البريد الالكترونى ', 'required|max_length[39]trim|xss_clean');
+        $this->form_validation->set_rules('face_page', 'صفحه الفيس بوك ', 'max_length[390]trim|xss_clean');
+        $this->form_validation->set_rules('notes', 'ملحوظات', 'trim|xss_clean|max_length[8000]');
+        $this->form_validation->set_rules('makan', 'المكان التقديم', 'trim|xss_clean|max_length[8000]');
+        $this->form_validation->set_rules('begin', 'بدايه التقديم', 'trim|xss_clean|max_length[8000]');
+        $this->form_validation->set_rules('last', 'اخر معاد للتقديم', 'trim|xss_clean|max_length[8000]');
+        $this->form_validation->set_rules('salary', 'المرتب', 'trim|xss_clean|max_length[8000]');
+        $this->form_validation->set_rules('shrot', 'الشروط', 'trim|xss_clean|max_length[8000]');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view("view_jops");
+        } else {
+            $name = $this->input->post('name');
+            $phone = $this->input->post('phone');
+            $email = $this->input->post('email');
+            $makan = $this->input->post('makan');
+            $begin = $this->input->post('begin');
+            $last = $this->input->post('last');
+            $salary = $this->input->post('salary');
+            $shrot = $this->input->post('shrot');
+            $face_page = $this->input->post('face_page');
+            $notes = $this->input->post('notes');
+
+            $inset_value = array(
+                'name' => $name,
+                'phone' => $phone,
+                'email' => $email,
+                'makan' => $makan,
+                'begin' => $begin,
+                'last' => $last,
+                'salary' => $salary,
+                'shrot' => $shrot,
+                'face_page' => $face_page,
+                'notes' => $notes
+            );
+
+            $this->load->model("cars_jops");
+            $this->cars_jops->insertJop($inset_value);
+            $data = $this->home_page();
+            $data['name'] = $name;
+            $this->load->view('view_jops', $data);
+        }
+    }
+
+    function load_houses() {
+
+        $data1 = $this->home_page();
+        $this->load->view('view_houses', $data1);
+    }
+
+    ///////////////////////////////////////
     function logout() {
         $this->session->sess_destroy();
         $this->load->view('view_login');
