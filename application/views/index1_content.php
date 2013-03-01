@@ -22,7 +22,7 @@
                   
 
                     <div class="clear"></div>
-
+  <img src="<?php echo base_url();?>images/block_logo.png" class="block_logo" width="190" height="150" />
                     <table width="450px" style="text-align:right; font-size:14px;" >
                         <tbody>
                             <tr>
@@ -77,11 +77,11 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+                  
   </li>
   
             </ul>
-<img src="<?php echo base_url();?>images/block_logo.png" class="block_logo" width="190" height="150" />
+
         </div>
 
         <!-- ---------------------------another doctor---------------------->
